@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="png"> 
+    <title>Bad Words</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Benvenuto in Bad-Words !</h1>
+        <p>Inserisci una frase nel primo campo e la parola che vorresti censusare nel secondo...Vediamo che succede! </p>
+    </div>
+
+    <div class="container">
+
+        <form method="GET" action="serverData.php" target="_blank">
+            
+            <div class="paragraph">
+                <label for="para">Inserisci una frase</label>
+                <textarea id="para" name="paragrafo" placeholder="Inserisci un testo max 500caratteri" maxlength="500" required></textarea>
+            </div>
+
+            <div class="censored">
+                <label for="cens">Parola da sostituire</label>
+                <input type="text" id="cens" name="censura" placeholder="Inserisci la parola che vuoi sostituire" minlength="2" required>
+            </div>
+
+            <div class="censored">
+                <label for="cens">Nuova parola</label>
+                <input type="text" id="cens" name="newParola" required>
+            </div>
+            
+            <button type="submit">Invia i dati</button>
+            
+        </form>
+
+    </div>
+</body>
+</html>
