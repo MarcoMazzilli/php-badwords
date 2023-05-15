@@ -4,7 +4,7 @@ $paragrafo            = $_GET['paragrafo'];
 $parolaDaCensurare    = $_GET['censura'];
 $newParola            = $_GET['newParola'];
 
-$paragrafoCensurato = str_replace(strtoupper($parolaDaCensurare), $newParola, strtoupper($paragrafo));
+$paragrafoCensurato = str_replace(strtolower($parolaDaCensurare), $newParola,strtolower($paragrafo));
 
 
 ?>
@@ -31,7 +31,7 @@ $paragrafoCensurato = str_replace(strtoupper($parolaDaCensurare), $newParola, st
 
     <div class="container answer">
         <h1> Paragrafo modificato</h1>
-        <p> <?php echo strtolower($paragrafoCensurato) ?> </p>
+        <p> <?php echo ucfirst( $paragrafoCensurato) ?> </p>
         <p>lunghezza : <?php echo strlen($paragrafoCensurato)?> caratteri.</p>
     </div>
 
